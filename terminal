@@ -110,3 +110,6 @@ error: remote origin already exists.
 PS C:\Users\admin\Desktop\Saved Pictures\git.1> git branch -M main
 /akparovag/work
 error: remote origin already exists.
+
+
+#Мнe удалось подключиться к гитхабу но почему-то в репозиторий его не видно. Так что я тут написала мою работу с терминалом (｡•̀ᴗ-)✧
