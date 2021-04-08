@@ -1,0 +1,112 @@
+(C) Корпорация Майкрософт (Microsoft Corporation). Все права защищены.
+
+Попробуйте новую кроссплатформенную оболочку PowerShell (https://aka.ms/pscore6)
+
+PS C:\Users\admin\Desktop\Saved Pictures\git.1> git config user.name
+akparovag03
+PS C:\Users\admin\Desktop\Saved Pictures\git.1> git config user.email
+akparovag.03@gmail.com
+PS C:\Users\admin\Desktop\Saved Pictures\git.1> git init
+Reinitialized existing Git repository in C:/Users/admin/Desktop/Saved Pictures/git.1/.gi
+t/
+Changes to be committed:
+  (use "git restore --staged <file>..." to unstage)
+        new file:   .gitignore
+        new file:   index.html
+        new file:   lol.txt
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+        modified:   .gitignore
+
+PS C:\Users\admin\Desktop\Saved Pictures\git.1> git add index.css
+PS C:\Users\admin\Desktop\Saved Pictures\git.1> git commit -m "Add index.js and index.cs
+[master 5a48782] Add index.js and index.css files
+ 3 files changed, 0 insertions(+), 0 deletions(-)
+ create mode 100644 .gitignore
+ create mode 100644 index.html
+ create mode 100644 lol.txt
+PS C:\Users\admin\Desktop\Saved Pictures\git.1> git status
+On branch master
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+        modified:   .gitignore
+
+no changes added to commit (use "git add" and/or "git commit -a")
+PS C:\Users\admin\Desktop\Saved Pictures\git.1> git log
+commit 5a48782829083c1bf054a8365f14830e368b9687 (HEAD -> master)
+Author: akparovag03 <akparovag.03@gmail.com>
+Date:   Thu Apr 8 20:14:28 2021 +0600
+commit 5a48782829083c1bf054a8365f14830e368b9687 (HEAD -> master)
+Author: akparovag03 <akparovag.03@gmail.com>
+Date:   Thu Apr 8 20:14:28 2021 +0600
+commit 5a48782829083c1bf054a8365f14830e368b9687 (HEAD -> master)
+Author: akparovag03 <akparovag.03@gmail.com>
+Date:   Thu Apr 8 20:14:28 2021 +0600
+commit 5a48782829083c1bf054a8365f14830e368b9687 (HEAD -> master)
+Author: akparovag03 <akparovag.03@gmail.com>
+Date:   Thu Apr 8 20:14:28 2021 +0600
+
+    Add index.js and index.css files
+
+commit 4d429e4613fde4b043761f6a2373e28250e27237
+Author: akparovag03 <akparovag.03@gmail.com>
+Date:   Thu Apr 8 18:26:55 2021 +0600
+
+    add .js and index.html
+
+commit 1bb303a008c30a8c2cb2c63bfb360b16f9b62aef (regForm)
+Author: akparovag03 <akparovag.03@gmail.com>
+Date:   Thu Apr 8 18:07:09 2021 +0600
+
+    add git.1.1
+PS C:\Users\admin\Desktop\Saved Pictures\git.1> git log --oneline
+5a48782 (HEAD -> master) Add index.js and index.css files
+4d429e4 add .js and index.html
+1bb303a (regForm) add git.1.1
+PS C:\Users\admin\Desktop\Saved Pictures\git.1> git checkout 5a48782
+Note: switching to '5a48782'.
+
+You are in 'detached HEAD' state. You can look around, make experimental
+changes and commit them, and you can discard any commits you make in this
+state without impacting any branches by switching back to a branch.
+If you want to create a new branch to retain commits you create, you may  
+
+  git switch -c <new-branch-name>
+Or undo this operation with:
+  git switch -
+
+
+M       .gitignore
+PS C:\Users\admin\Desktop\Saved Pictures\git.1> git reset 4d429e4 --hard
+PS C:\Users\admin\Desktop\Saved Pictures\git.1> git revert 5a48782
+nothing to commit, working tree clean
+PS C:\Users\admin\Desktop\Saved Pictures\git.1> git branch regForm
+fatal: A branch named 'regForm' already exists.
+PS C:\Users\admin\Desktop\Saved Pictures\git.1> git checkout regForm
+Previous HEAD position was 4d429e4 add .js and index.html
+Switched to branch 'regForm'
+PS C:\Users\admin\Desktop\Saved Pictures\git.1> git checkout master
+Switched to branch 'master'
+PS C:\Users\admin\Desktop\Saved Pictures\git.1> git merge regForm
+Already up to date.
+error: remote origin already exists.
+PS C:\Users\admin\Desktop\Saved Pictures\git.1> git push
+fatal: The current branch master has no upstream branch.
+To push the current branch and set the remote as upstream, use
+
+
+fatal: Could not read from remote repository.
+Please make sure you have the correct access rights
+PS C:\Users\admin\Desktop\Saved Pictures\git.1> git push origin master
+fatal: 'ht' does not appear to be a git repository
+fatal: Could not read from remote repository.
+
+Please make sure you have the correct access rights
+and the repository exists.
+PS C:\Users\admin\Desktop\Saved Pictures\git.1> git remote add origin https://github.com/akparovag/work.git
+error: remote origin already exists.
+PS C:\Users\admin\Desktop\Saved Pictures\git.1> git branch -M main
+/akparovag/work
+error: remote origin already exists.
