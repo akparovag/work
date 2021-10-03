@@ -1,0 +1,87 @@
+#include <stdio.h>
+#include <iostream>
+#include <math.h>
+#include <cmath>
+
+using namespace std;
+//1
+int main() {
+    
+    float x = 2, k = 2, y;
+    
+    y = (log10(1 + pow(x,2)) + cos(x + 1));
+      
+    cout << "res:" << y << endl;
+
+}
+
+int main() //2
+{
+    float x = 2, a = 2, b = 1, y;
+    
+    y = a*y + b*x*cos(sqrt(x)) / x + a*b;
+    
+    cout << y << endl;
+}
+
+int main() //3
+{
+    float x = 2, a = 2, b = 1, pi = 3.14, y;
+    
+    y = -pi + pow(cos(pow(x,3)),2) + pow(sin(pow(x,2)),3);
+    
+    cout << y << endl;
+}
+
+int main() //4
+{
+    float x = 2, a = 2, b = 1, pi = 3.14, y;
+    
+    y = pow(cos(pow(x,2)),3) + pow(sin(pow(x,3)),2);
+    
+    cout << y << endl;
+}
+
+int main() //5
+{
+    float x = 2, a = 2, b = 1, pi = 3.14, y;
+    
+    y = log(x + 0.5) + (exp(x) - exp(-x));
+    
+    cout << y << endl;
+}
+
+int main() //6
+{
+    float x = 2, a = 2, b = 1, pi = 3.14, y;
+    
+    y = 2/3*pow(sin(x),2) - 3/4*pow(cos(x),2);
+    
+    cout << y << endl;
+}
+
+
+int main() //7
+{
+    float x = 2, c = 2, d = 1, k = 3, y;
+    
+    y = pow(sin(c*x + pow(d,2) + k*pow(x,2)),3);
+    
+    cout << y << endl;
+}
+int main() //8
+{
+    float x, y, z;
+
+    cout << "Введите число: ";
+    cin >> x;
+
+    if (z >= 0) 
+        x = 2*z + 1;
+    else if (z < 0)  
+        x = log(pow(z,2) - z);
+    
+    y = pow(sin(x) , 2) + pow(cos(pow(x,3)) , 5) + log(pow(x , 2/5));
+    
+    cout <<"y="<<y<<"\n";
+} 
