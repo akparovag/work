@@ -192,3 +192,186 @@ int main() //8
     }
     cout << "s=" << s <<"\n"; 
 }
+
+#include <iostream>
+#include <math.h>
+#include <limits>
+#include <cmath>
+
+using namespace std;
+ 
+int main() //9
+{
+    long double s = 0, k = 1, x = 1;
+    int infinity = std::numeric_limits<int>::max();
+    
+    while(k <= infinity) {
+        k++;
+        s = s + x / pow(k, 3) + k * sqrt(fabs(x)) + 1;
+    }
+    cout << "s=" << s <<"\n"; 
+}
+
+#include <iostream>
+#include <math.h>
+#include <limits>
+#include <cmath>
+
+using namespace std;
+ 
+int main() //10
+{
+    long double s = 0, k = 1, x = 1;
+    int infinity = std::numeric_limits<int>::max();
+    
+    while(k <= infinity) {
+        k++;
+        s = s + 1 / pow(x, 2) + pow(k, 3);
+    }
+    cout << "s=" << s <<"\n"; 
+}
+
+#include <iostream>
+#include <math.h>
+#include <limits>
+#include <cmath>
+
+using namespace std;
+ 
+int main() //11
+{
+    long double s = 0, k = 1, x = 1;
+    int infinity = std::numeric_limits<int>::max();
+    
+    while(k <= infinity) {
+        k++;
+        s = s + pow(x, k) / k ;
+    }
+    cout << "s=" << s <<"\n"; 
+}
+
+#include <iostream>
+#include <math.h>
+#include <limits>
+#include <cmath>
+
+using namespace std;
+ 
+int main() //12
+{
+    long double s = 0, k = 1, x = 1;
+    int infinity = std::numeric_limits<int>::max();
+    
+    while(k <= infinity) {
+        k++;
+        s = s + pow(x, 2) / pow(k, 2) ;
+    }
+    cout << "s=" << s <<"\n"; 
+}
+
+#include <iostream>
+#include <math.h>
+#include <limits>
+#include <cmath>
+
+using namespace std;
+
+int factorial(int i)
+{
+  if (i==0) return 1;
+  else return i*factorial(i-1);
+}
+
+ 
+int main() //13
+{
+    long double s = 0, k = 1, x = 1, a;
+    int infinity = std::numeric_limits<int>::max();
+    
+    a = 2*k + 1
+    
+    while (k <= infinity) {
+        k++;
+        s = s + 1 / factorial(a) * pow((x/3),4*k + 3);
+    }
+    cout << "s=" << s <<"\n"; 
+}
+
+
+//14
+#include <iostream>
+#include <math.h>
+#include <limits>
+#include <cmath>
+
+using namespace std;
+int main() 
+{
+    long double s = 0, k = 1, x = 1;
+    int infinity = std::numeric_limits<int>::max();
+
+    
+    while (k <= infinity) {
+        k++;
+        s = s + 1 / sqrt(fabs(x)) + pow(k, 2);
+    }
+    cout << "s=" << s <<"\n"; 
+}
+
+#include <iostream>
+#include <math.h>
+#include <limits>
+#include <cmath>
+
+using namespace std;
+int main() //16
+{
+    long double s = 0, k = 1, x = 1;
+    int infinity = std::numeric_limits<int>::max();
+
+    
+    while (k <= infinity) {
+        k++;
+        s = s + pow(x, k) / pow(k+1, 2);
+    }
+    cout << "s=" << s <<"\n"; 
+}
+
+#include <iostream>
+#include <math.h>
+#include <limits>
+#include <cmath>
+
+using namespace std;
+int main() //15
+{
+    long double s = 0, k = 1, x = 1;
+    int infinity = std::numeric_limits<int>::max();
+
+    
+    while (k <= infinity) {
+        k++;
+        s = s + sqrt(fabs(pow(x, 3))) / pow(k,3);
+    }
+    cout << "s=" << s <<"\n"; 
+}
+
+//17
+#include <iostream>
+#include <math.h>
+#include <limits>
+#include <cmath>
+
+using namespace std;
+int main() 
+{
+    long double s = 0, k = 1, x = 1;
+    int infinity = std::numeric_limits<int>::max();
+
+    
+    while (k <= infinity) {
+        k++;
+        s = s + (k + 1) * pow(x, k) / pow(3, k);
+    }
+    cout << "s=" << s <<"\n"; 
+}
