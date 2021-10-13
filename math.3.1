@@ -1,0 +1,373 @@
+//1
+#include <iostream>
+#include <math.h>
+
+using namespace std;
+
+int main() 
+{
+    float s = 0, n;
+    int i = 1;
+
+    do {
+        i++;
+        s=s+1/6+i;
+    }
+    while (i <= 6);
+    cout << "s=" << s <<"\n"; 
+}
+
+//2
+#include<iostream>
+#include <math.h>
+#include <conio.h>
+
+using namespace std;
+
+int factorial(int i)
+{
+  if (i==0) return 1;
+  else return i*factorial(i-1);
+}
+ 
+int main() 
+{
+    float s, n;
+    int i, k;
+    
+    cout << "n=";
+    cin >> n;
+   
+    s = 0; k = 1;
+    do {
+        k++;
+        s=s+pow(2,k)/ factorial(k);    
+    } 
+    while (k <= n);
+    cout << "s=" << s <<"\n"; 
+}
+
+//3
+#include<iostream>
+#include <math.h>
+
+using namespace std;
+
+int factorial(int i)
+{
+  if (i==0) return 1;
+  else return i*factorial(i-1);
+}
+ 
+int main() 
+{
+    float s, x = 1;
+    int i = 1, a;
+
+    a = 2*i +1;
+    s = 0; 
+    do {
+        i = i + 1;
+        s= s + x / factorial(a);
+    }
+    while (i <= 7);
+    cout << "s=" << s <<"\n"; 
+}
+
+//4
+#include<iostream>
+#include <math.h>
+
+using namespace std;
+
+int main() 
+{
+    float p, x = 1, i;
+    
+    p = 0; i = 1;
+    do {
+        i = i * 1;
+        p = p + pow(x - 2, i) / pow((pow(x-2,i))+1,2);
+    }
+    while (i <= 7);
+    cout << "p=" << p <<"\n"; 
+}
+
+
+//5
+#include <iostream>
+#include <math.h>
+
+using namespace std;
+ 
+int main() 
+{
+    float s,  i, x = 1;
+
+    s = 0; i = 1;
+    do {
+        i++;
+        s = s + 1 + pow(x, 2*i + 2) / 4*i - 1;        
+    }    
+    while (i <= 40 );
+    cout << "s=" << s <<"\n"; 
+}
+
+
+//6
+#include <iostream>
+#include <math.h>
+
+using namespace std;
+ 
+int main() 
+{
+    float s, k, n;
+    
+    cout << "n = ";
+    cin >> n;
+   
+    s = 0; k = 1;
+    do {
+        k++;
+        s = s + 1 / k*(k + 1);
+    }    
+    while(k <= n);
+    cout << "s=" << s <<"\n"; 
+}
+
+//7 mb
+#include<iostream>
+#include <math.h>
+
+using namespace std;
+
+int factorial(int i)
+{
+  if (i==0) return 1;
+  else return i*factorial(i-1);
+}
+ 
+int main() 
+{
+    float s, n;
+    int i;
+    
+    cout << "n=";
+    cin >> n;
+    
+    s = 0; i = 1;
+    do {
+        i++;
+        s= s + 2 + 1 / factorial(i);
+    }   
+    while (i <= n);
+    cout << "s=" << s <<"\n"; 
+}
+//8
+#include <iostream>
+#include <math.h>
+#include <limits>
+#include <cmath>
+
+using namespace std;
+ 
+int main() 
+{
+    long double s, k, x = 1;
+    int infinity = 100;
+
+    s = 0; k = 1;
+    do {
+        k++;
+        s = s + 1 / pow(x, 3)*pow(k,2);    
+    }  
+    while(k <= infinity);
+    cout << "s=" << s <<"\n"; 
+}
+
+//9
+#include <iostream>
+#include <math.h>
+#include <limits>
+#include <cmath>
+
+using namespace std;
+ 
+int main() 
+{
+    long double s = 0, k = 1, x = 1;
+    int infinity = 100;
+    do {
+        k++;
+        s = s + x / pow(k, 3) + k * sqrt(fabs(x)) + 1;
+    }
+    while (k <= infinity);
+    
+    cout << "s=" << s <<"\n"; 
+}
+
+//10
+#include <iostream>
+#include <math.h>
+#include <limits>
+#include <cmath>
+
+using namespace std;
+ 
+int main() 
+{
+    long double s = 0, k = 1, x = 1;
+    int infinity = 100;
+    do {
+        k++;
+        s = s + 1 / pow(x, 2) + pow(k, 3);
+    }    
+    while(k <= infinity);
+    cout << "s=" << s <<"\n"; 
+}
+
+//11
+#include <iostream>
+#include <math.h>
+#include <limits>
+#include <cmath>
+
+using namespace std;
+ 
+int main() 
+{
+    long double s = 0, k = 1, x = 1;
+    int infinity = 50;
+    do {
+        k++;
+        s = s + pow(x, k) / k ;        
+    }  
+    while(k <= infinity);
+    cout << "s=" << s <<"\n"; 
+}
+
+#include <iostream>
+#include <math.h>
+#include <limits>
+#include <cmath>
+
+using namespace std;
+ 
+int main() //12
+{
+    long double s = 0, k = 1, x = 1;
+    int infinity = 50;
+    do {
+        k++;
+        s = s + pow(x, 2) / pow(k, 2) ;    
+    }  
+    while(k <= infinity);
+    cout << "s=" << s <<"\n"; 
+}
+
+#include <iostream>
+#include <math.h>
+#include <limits>
+#include <cmath>
+
+using namespace std;
+
+int factorial(int i)
+{
+  if (i==0) return 1;
+  else return i*factorial(i-1);
+}
+
+ 
+int main() //13
+{
+    long double s = 0, k = 1, x = 1, a;
+    int infinity = 100;
+    
+    a = 2*k + 1;
+    do {
+        k++;
+        s = s + 1 / factorial(a) * pow((x/3),4*k + 3);    
+    }  
+    while (k <= infinity);
+    cout << "s=" << s <<"\n"; 
+}
+
+//14
+#include <iostream>
+#include <math.h>
+#include <limits>
+#include <cmath>
+
+using namespace std;
+int main() 
+{
+    long double s = 0, k = 1, x = 1;
+    int infinity = 100;
+
+    do {
+        k++;
+        s = s + 1 / sqrt(fabs(x)) + pow(k, 2);    
+    } 
+    while (k <= infinity);
+    cout << "s=" << s <<"\n"; 
+}
+
+#include <iostream>
+#include <math.h>
+#include <limits>
+#include <cmath>
+
+using namespace std;
+int main() //15
+{
+    long double s = 0, k = 1, x = 1;
+    int infinity = 100;
+
+    do {
+        k++;
+        s = s + pow(x, k) / pow(k+1, 2);    
+    }
+    while (k <= infinity);
+    cout << "s=" << s <<"\n"; 
+}
+
+#include <iostream>
+#include <math.h>
+#include <limits>
+#include <cmath>
+
+using namespace std;
+int main() //16
+{
+    long double s = 0, k = 1, x = 1;
+    int infinity = 100;
+    
+    do {
+        k++;
+        s = s + sqrt(fabs(pow(x, 3))) / pow(k,3);    
+    }    
+    while (k <= infinity);
+    cout << "s=" << s <<"\n"; 
+}
+
+//17
+#include <iostream>
+#include <math.h>
+#include <limits>
+#include <cmath>
+
+using namespace std;
+int main() 
+{
+    long double s = 0, k = 1, x = 1;
+    int infinity = 100;
+    
+    do {
+        k++;
+        s = s + (k + 1) * pow(x, k) / pow(3, k);    
+    }   
+    while (k <= infinity);
+    cout << "s=" << s <<"\n"; 
+}
