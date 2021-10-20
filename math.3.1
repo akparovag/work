@@ -371,3 +371,47 @@ int main()
     while (k <= infinity);
     cout << "s=" << s <<"\n"; 
 }
+
+// Example program
+//1
+#include <iostream>
+#include <math.h>
+
+using namespace std;
+
+int main() 
+{
+    float s = 0, n;
+    int i = 1;
+
+    for(i = 1; i <=6; i++)
+        s=s+1/6+i;
+    cout << "s=" << s <<"\n"; 
+}
+//2
+#include<iostream>
+#include <math.h>
+#include <conio.h>
+
+using namespace std;
+
+int factorial(int i)
+{
+  if (i==0) return 1;
+  else return i*factorial(i-1);
+}
+ 
+int main() 
+{
+    float s, n;
+    int i, k;
+    
+    cout << "n=";
+    cin >> n;
+   
+    s = 0; k = 1;
+
+    for(k = 1; k <= n; k++)
+        s=s+pow(2,k)/ factorial(k); 
+    cout << "s=" << s <<"\n"; 
+}
