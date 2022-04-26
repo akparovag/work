@@ -1,5 +1,8 @@
+package com.example.gunshot;
+
 import android.annotation.TargetApi;
 import android.app.Activity;
+import android.graphics.drawable.AnimationDrawable;
 import android.media.AudioAttributes;
 import android.media.AudioManager;
 import android.media.SoundPool;
@@ -17,8 +20,10 @@ public class MainActivity extends Activity {
     private int sound_baraban;
     private ImageView blood_image;
     private int on_shot = 3;
-    private int max_number = 10;
+    private int max_number = 5;
     private int random = 0;
+    private ImageView imageView;
+    private AnimationDrawable animDrawable;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -27,7 +32,9 @@ public class MainActivity extends Activity {
         createSoundPool();
         loadSounds();
         init();
-
+        imageView = (ImageView) findViewById(R.drawable.gunshot_animation);
+        imageView = (ImageView) findViewById(R.drawable.baraban_animation);
+        animDrawable = (AnimationDrawable) imageView.getDrawable();
     }
     protected void createSoundPool() {
         if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.LOLLIPOP) {
@@ -63,28 +70,27 @@ public class MainActivity extends Activity {
     {
         if(random == on_shot )
         {
-        sounds.play(sound_shot,1.0f,1.0f,1,0,1);
-        blood_image.setVisibility(View.VISIBLE);
+            sounds.play(sound_shot,1.0f,1.0f,1,0,1);
+            blood_image.setVisibility(View.VISIBLE);
         }
         else
         {
             sounds.play(sound_shot_false,1.0f,1.0f,1,0,1);
         }
-
+        animDrawable.start();
     }
 
     public void onBaraban(View view)
     {
         sounds.play(sound_baraban,1.0f,1.0f,1,0,1);
         blood_image.setVisibility(View.GONE);
-         random = new Random().nextInt(max_number);
+        random = new Random().nextInt(max_number);
+        animDrawable.start();
         //Log.d("MainActivity","Random number " + random);
 
     }
     private void init()
     {
         blood_image = findViewById(R.id.image_blood);
-
     }
-
 }
